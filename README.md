@@ -27,17 +27,27 @@
 
 Требуемые ключи для окружения:
 - DB_HOST - Хост базы данных;
-- DB_PASSWORD - Пароль от базы данных;
-- SECRET_KEY - Секретный ключ;
-- DEBUG - Режим отладки.
+- DB_PORT - Порт базы данных;
+- DB_NAME - Имя базы данных;
+- DB_USER - Логин от базы данных;
+- DB_PASSWORD - Пароль от базы данных.
+
+Опциональные ключи для окружения:
+- SECRET_KEY - Секретный ключ. По стандарту - 123;
+- DEBUG - Режим отладки. По стандарту - True;
+- ALLOWED_HOSTS - Допустимые хосты. По стандарту - *
 
 Пример .env:
 
 ```
-export DB_HOST=db.com
-export DB_PASSWORD=password
-export SECRET_KEY=key
+export DB_HOST=checkpoint.devman.org
+export DB_PORT=5434
+export DB_NAME=checkpoint
+export DB_USER=guard
+export DB_PASSWORD=osim5
+export SECRET_KEY=REPLACE_ME
 export DEBUG=false
+export ALLOWED_HOSTS=*
 ```
 
 Python3 должен быть уже установлен. 
