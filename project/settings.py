@@ -9,8 +9,8 @@ db_name = env.str('DB_NAME')
 db_user = env.str('DB_USER')
 db_password = env.str('DB_PASSWORD')
 secret_key = env.str('SECRET_KEY', '123')
-debug_mode = env.bool('DEBUG', True)
-allowed_hosts = env.list('ALLOWED_HOSTS', '*')
+debug_mode = env.bool('DEBUG', False)
+allowed_hosts = env.list('ALLOWED_HOSTS', '127.0.0.1')
 
 DATABASES = {
     'default': {
